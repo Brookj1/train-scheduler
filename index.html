@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JamTrack Schedule</title>
+    <!-- jQuery link -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <!-- ajax link -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <!-- Bootstap css link -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <!-- Bootstrap js link -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <!-- CSS file link -->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css"/>  
+</head>
+<body>
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+          <h1 class="display-4">JamTrack Rail Lines</h1>
+          <p class="lead">Train Scheduler: Where Do You Want To Go?</p>
+        </div>
+    </div>
+<br>
+<!-- This is the Train Schedule table where we will feed our information from the database and our js calcs -->
+    <div class="container">
+        <h2>Train Schedule</h2>
+            <table class="table">
+              <thead>
+                <tr>
+                  <!-- The scope attribute specifies that this is a header for a column -->
+                  <th scope="col">Train Name</th>
+                  <th scope="col">Destination</th>
+                  <th scope="col">Frequency</th>
+                  <th scope="col">Next Arrival</th>
+                  <th scope="col">Minutes Away</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Midnight Train</td>
+                  <td>Anywhere</td>
+                  <td>2 Hours</td>
+                </tr>
+              </tbody>
+            </table>
+    </div>
+<!-- This is the form where information about a new train can be added and submitted -->
+    <div class="container">
+        <div class="card">
+            <div class="card-body">
+                <h3>Add Train</h3>
+                <form>
+                    <div class="form-group">
+                        <label for="addTrain">Train Name</label>
+                        <input type="trainName" class="form-control" id="trainNameInput" placeholder="Train Name">
+                    </div>
+                    <div class="form-group">
+                        <label for="destinationLabel">Destination</label>
+                        <input type="destinationName" class="form-control" id="destinationInput" placeholder="Destination">
+                    </div>
+                    <div class="form-group">
+                        <label for="trainTimeLabel">First Train Time</label>
+                        <input type="firstTrainTime" class="form-control" id="firstTrainTimeInput" placeholder="First Train Time (MM/DD/YYYY)">
+                    </div>
+                    <div class="form-group">
+                        <label for="frequencyLabel">Frequency</label>
+                        <input type="frequency" class="form-control" id="frequencyInput" placeholder="Frequency">
+                    </div>
+                    <div class="form-group form-check">
+                        </div>
+                            <button type="submit" class="btn sumbit-button">Submit</button>
+                </form>
+
+
+
+
+
+
+
+
+
+
+    <!-- Firebase script -->
+    <script src="https://www.gstatic.com/firebasejs/5.5.6/firebase.js"></script>
+    <!-- Javacript script -->
+    <script type="text/javascript" src="assets/javasript/app.js"></script>
+</body>
+</html>
+  
